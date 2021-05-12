@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+{{#if error}}
+<div class="alert alert-success">{{error}}</div>
+{{/if}}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form action="/validateEmail" method="post" role="form" enctype="application/x-www-form-urlencoded">             
+                <input type="hidden" name="accessToken" id="accessToken" value="{{{accessToken}}}" />
+                <input type="hidden" name="storeHash" id="storeHash" value="{{{storeHash}}}" />
+                <input type="hidden" name="url" id="url" value="{{{url}}}" />
+                <div class="form-group">
+                    <label for="email">TruAbilities Login Email</label>
+                    <input type="email" required class="form-control" name="email" id="email" placeholder="Email Address">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
